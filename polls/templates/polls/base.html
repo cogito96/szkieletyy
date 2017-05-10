@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block head %}Zespoly{% endblock %}</title>
+    <title>{% block head %}{% endblock %}</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/matches.css' %}">
@@ -11,20 +11,31 @@
 
 <body>
     <div class="left_side">
-    <a href="">DRUZYNY</a>
-
+        <h1 style="Margin:10px;">
+            Menu:
+        </h1>
+        <a href="http://127.0.0.1:8000/polls/teams/" style="font-size:25px;Margin:20px;">
+                Lista zespołów
+        </a>
+        <br/>
+        <a href="http://127.0.0.1:8000/polls/match/" style="font-size:25px;Margin:20px;">
+                Lista mecze
+        </a>
+        <br/>
+        <a href="http://127.0.0.1:8000/polls/players/" style="font-size:25px;Margin:20px;">
+                Lista zawodnikow
+        </a>
     </div>
-
     <div class="center_side">
         <a href="http://www.carlsberg.pl/pl/" target="_blank">
-            <img src="https://images3.alphacoders.com/277/277225.jpg" style="width:95%;height:200px; margin:20px;"/>
+            <img src="https://images3.alphacoders.com/277/277225.jpg" style="width:95%;height:250px;Margin:20px;"/>
         </a>
 
-
-              {%block center_side %}
-
-              {%endblock center_side %}
-
+        <h3>
+            {%block center_side %}
+s
+            {%endblock center_side %}
+        </h3>
 
     </div>
     <div class="left_side"></div>
