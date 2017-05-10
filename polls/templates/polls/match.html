@@ -1,0 +1,9 @@
+{% extends "polls/base.html" %}
+
+{% block head %}teams{% endblock head %}
+
+{% block center_side %}
+    {% for m in match %}
+        {{m.zespol_gospodarz}} {{m.zespol_gosc}}</br>
+    {% endfor %}
+{%endblock center_side %}

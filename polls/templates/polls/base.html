@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block head %}Zespoly{% endblock %}</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/matches.css' %}">
+</head>
+
+<body>
+    <div class="left_side">
+    <a href="">DRUZYNY</a>
+
+    </div>
+
+    <div class="center_side">
+        <a href="http://www.carlsberg.pl/pl/" target="_blank">
+            <img src="https://images3.alphacoders.com/277/277225.jpg" style="width:95%;height:200px; margin:20px;"/>
+        </a>
+
+
+              {%block center_side %}
+
+              {%endblock center_side %}
+
+
+    </div>
+    <div class="left_side"></div>
+</body>
+</html>

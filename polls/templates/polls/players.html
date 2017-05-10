@@ -1,0 +1,10 @@
+{% extends "polls/base.html" %}
+
+{% block head %}players{% endblock %}
+
+{% block center_side %}
+    {% for p in players %}
+        {{p.imie}} {{p.nazwisko}}</br>
+    {% endfor %}
+{% endblock center_side %}
+
