@@ -8,6 +8,7 @@ class Zespol(models.Model):
     prezes = models.CharField(max_length=50)
     strona_internetowa = models.CharField(max_length=200)
 
+
     def __unicode__(self):
         return self.nazwa_klubu
 

@@ -19,5 +19,21 @@
 }
 
 
+#square{
+    width: 50%
+    float: left;
+}
+
+.title{
+    text-align: center;
+    margin: 11px;
+    width:46%;
+    height:142px;
+    float:left;
+    background-color: red;
+    }
+
+
+
 
 
