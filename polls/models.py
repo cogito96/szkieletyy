@@ -12,6 +12,9 @@ class Zespol(models.Model):
     def __unicode__(self):
         return self.nazwa_klubu
 
+
+    
+
 class Zawodnik(models.Model):
     class Meta:
         verbose_name_plural = "Zawodnicy"
