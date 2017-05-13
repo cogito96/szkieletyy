@@ -1,26 +1,10 @@
 
-.left_side {
-    background-color: #d3d3d3;
-    width: 25%;
-    height: 900px;
-    float: left;
-}
 
-.center_side {
-    width: 50%;
-    height: 900px;
-    float: left;
-}
 
 #contener{
 width:100%;
 height:60%;
 }
-.ad {
-    width: 100%;
-    height: 300px;
-}
-
 
 #square{
     width: 50%
@@ -28,7 +12,7 @@ height:60%;
 }
 
 .title{
-    text-align: center;
+
     margin: 11px;
     margin-top:4px;
     width:46%;
@@ -39,14 +23,16 @@ height:60%;
 
 .media{
     margin:15px;
-    width:157px;
-    height:142px;
+    margin-top:10px;
+    width:159px;
+    height:125px;
     float:left;
 }
 
 #footer{
     width:50%;
 }
+
 
 
 
