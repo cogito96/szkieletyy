@@ -7,13 +7,26 @@ class Zespol(models.Model):
     trener = models.CharField(max_length=50)
     prezes = models.CharField(max_length=50)
     strona_internetowa = models.CharField(max_length=200)
-
+    punkty=models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.nazwa_klubu
 
+    def licz_punkty(self):
+      mecze=Mecz.objects.all()
+      for m in mecze:
+        if self.nazwa_klubu==m.zespol_gospodarz:
+            if m.bramki_gospodarz>m.bramki_gosc:
+               self.punkty+=3
+            if m.bramki_gospodarz==m.zespol_gosc:
+               self.punkty+=1
+        if self.nazwa_klubu==m.zespol_gosc:
+            if m.bramki_gospodarz<m.bramki_gosc:
+               self.punkty+=3
+            if m.bramki_gospodarz==m.zespol_gosc:
+               self.punkty+=1
 
-    
+
 
 class Zawodnik(models.Model):
     class Meta:
