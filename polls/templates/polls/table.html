@@ -1,0 +1,25 @@
+{% extends "polls/base.html" %}
+
+{% block head %}Tabela{% endblock head %}
+
+{% block center_side %}
+<table border="1" align="center">
+    <tr>
+        <td>Miejsce</td>
+        <td>Nazwa zespołu</td>
+        <td>Liczba punktów</td>
+        <td>Bramki strzelone</td>
+        <td>Bramki stracone</td>
+    </tr>
+    {% for entry in list %}
+    <tr>
+        <td>{{1}}</td>
+        <td>{{entry.1}}</td>
+        <td>{{entry.0.0}}</td>
+        <td>{{entry.0.1}}</td>
+        <td>{{entry.0.2}}</td>
+        <br/>
+    </tr>
+    {% endfor %}
+</table>
+{%endblock center_side %}

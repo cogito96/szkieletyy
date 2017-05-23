@@ -1,0 +1,17 @@
+{% extends "polls/base.html" %}
+
+{% block head %}action{% endblock head %}
+
+{% block center_side %}
+<table align="center" >
+{% for a in statistic %}
+
+    <tr ><td >{{a.2}}&nbsp;&nbsp;&nbsp;</td><td align="center">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;{{a.3}}</td></tr>
+    <tr><td>{{a.0.0.0}}&nbsp;&nbsp;&nbsp;</td><td align="center">&nbsp;&nbsp;&nbsp;GOLE&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;{{a.0.0.1}}</td></tr>
+    <tr><td>{{a.0.1.0}}&nbsp;&nbsp;&nbsp;</td><td align="center">&nbsp;&nbsp;&nbsp;STRZALY&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;{{a.0.1.1}}</td></tr>
+    <tr><td>{{a.0.2.0}}&nbsp;&nbsp;&nbsp;</td><td align="center">&nbsp;&nbsp;&nbsp;FAULE&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;{{a.0.2.1}}</td></tr>
+    <tr><td>{{a.0.3.0}}&nbsp;&nbsp;&nbsp;</td><td align="center">&nbsp;&nbsp;&nbsp;ŻÓŁTE KARTKI&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;{{a.0.3.1}}</td></tr>
+    <tr><td>{{a.0.4.0}}&nbsp;&nbsp;&nbsp;</td><td align="center">&nbsp;&nbsp;&nbsp;CZERWONE KARTKI&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;{{a.0.4.1}}</td></tr>
+    {% endfor %}
+</table>
+{%endblock center_side %}

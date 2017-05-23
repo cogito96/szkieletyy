@@ -1,0 +1,46 @@
+{% extends "polls/base.html" %}
+
+{% block head %}action{% endblock head %}
+
+{% block center_side %}
+
+<table border="1" align="left">
+    <tr>
+        <td>Zespol</td>
+        <td>Imie</td>
+        <td>Nazwisko</td>
+        <td>Zdobyte brameki</td>
+        <td>Oddane strzały</td>
+        <td>Faule</td>
+        <td>Żółte kartki</td>
+        <td>Czerwone kartki</td>
+    </tr>
+{% for a in action %}
+    <tr><td>{{a.1}}</td></tr>
+    <tr><td>{{a.2}}</td></tr>
+    {% for aa in a.0 %}
+        {% for aaa in aa.gospodarz %}
+            <tr>
+                <td></td>
+                {% for aaaa in aaa %}
+                <td>{{aaaa}}</td>
+                {% endfor %}
+            </tr>
+    {% endfor %}
+    {% endfor %}
+    <tr><td>{{a.3}}</td></tr>
+    {% for aa in a.0 %}
+        {% for aaa in aa.gosc %}
+            <tr>
+                <td></td>
+                {% for aaaa in aaa %}
+            <td>{{aaaa}}</td>
+            {% endfor %}<tr/>
+        {% endfor %}
+    {% endfor %}
+    {% endfor %}
+    </table>
+
+    {%endblock center_side %}
+
+

@@ -1,10 +1,24 @@
 {% extends "polls/base.html" %}
 
 {% block head %}teams{% endblock head %}
-
-{% block center_side %}
+    {% block center_side %}
+<table border="1" align="center">
+    <tr>
+        <td>Zespol:</td>
+        <td>Trener:</td>
+        <td>Prezes:</td>
+        <td>Strona internetowa:</td>
+    </tr>
     {% for t in teams %}
-        {{t.nazwa_klubu}} {{t.trener}} {{t.punkty}}</br>
+    <tr>
+        <td>{{t.nazwa_klubu}}&nbsp; &nbsp; &nbsp; </td>
+        <td>{{t.trener}}&nbsp; &nbsp; &nbsp; </td>
+        <td>{{t.prezes}}&nbsp; &nbsp; &nbsp; </td>
+        <td> <a href="{{t.strona_internetowa}}" target="_blank">{{t.strona_internetowa}}&nbsp; &nbsp; &nbsp;</a></td>
+    </tr>
     {% endfor %}
+</table>
 {%endblock center_side %}
+
+
 

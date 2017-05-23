@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block head %}{% endblock %}</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/matches.css' %}">
     <script type="{% static '/javascript" src="clock.js"></script>
 </head>
 
-<body marginheight="0" marginwidth="0">
-    <div id="contener">
-        <div class="left_side" style="background-color: #d3d3d3;width: 25%;height: 758px;float: left;">
+<body marginheight="0" marginwidth="0" >
+    <div id="contener" style="position: absolute;height:100%;width:100%;">
+        <div class="left_side" style="background-color: #d3d3d3;height:100%;width:25%;float:left;">
             {% block left_side %}
             <h1 style="Margin:10px;">
                 Menu:
@@ -32,27 +29,41 @@
             <a href="http://127.0.0.1:8000/polls/players/" style="font-size:25px;Margin:20px;">
                  Lista zawodnikow
             </a>
+            <br/>
+            <a href="http://127.0.0.1:8000/polls/table/" style="font-size:25px;Margin:20px;">
+                 Aktualna tabela
+            </a>
+            <br/>
+            <a href="http://localhost:8000/polls/action/" style="font-size:25px;Margin:20px;">
+                 Statystyki meczów
+            </a>
+             <br/>
+            <a href="http://localhost:8000/polls/statistic/" style="font-size:25px;Margin:20px;">
+                 Ogólne statystyki z meczu
+            </a>
+             <br/>
+            <a href="http://localhost:8000/polls/results/" style="font-size:25px;Margin:20px;">
+                 Statystyki zawodników
+            </a>
             {% endblock %}
         </div>
-        <div class="center_side" style="width: 50%;height: 758px;float: left;">
-            <div id="logo">
+        <div class="center_side" style=";height:100%;width:50%;overflow: auto;float:left;">
           <a href="http://www.carlsberg.pl/pl/" target="_blank">
-             <img src="https://images3.alphacoders.com/277/277225.jpg" style="width:95%;height:250px;Margin:9px; margin-bottom:0px;"/>
+             <img src="https://images3.alphacoders.com/277/277225.jpg" style="width:95%;height:230px;Margin:9px; margin-bottom:0px;"/>
           </a>
-
             <h3>
-
               {%block center_side %}
-                  s
-             {%endblock center_side %}
+                  Tekst glowny
+              {%endblock center_side %}
             </h3>
 
-            </div>
-            <div id="footer"  style="clear:both;position:absolute;bottom:0;">
-            2017 &copy; Wykonali Lukasz Bujno, Kamil Letowski, Przemyslaw Noskowicz. Wszelkie prawa zastrzezone
-            </div>
+            <center style="vertical-align:bottom;">
+                    2017 &copy; Wykonali Lukasz Bujno, Kamil Letowski, Przemyslaw Noskowicz. </br>
+                Zgłoś się do nas,aby zapisać sie na turniej. Rejestracji mozna dokonac wysyłając zgłoszenie na lkp@op.pl
+            </center>
         </div>
-        <div class="left_side" style="background-color: #d3d3d3;width: 25%;height: 758px;float: left;" onload="clock()"/>
+
+        <div class="left_side" style="background-color: #d3d3d3;width: 25%;height: 100%;float: left;" >
 
         </div>
 

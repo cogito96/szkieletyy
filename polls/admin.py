@@ -4,6 +4,7 @@ from .models import Zawodnik
 from .models import Zespol
 from .models import TypZdarzenia
 from .models import Mecz
+from .models import Zdarzenie
 
 class ZawodnikAdmin(admin.ModelAdmin):
     fields = ['imie', 'nazwisko', 'pozycja', 'data_urodzenia', 'zespol']
@@ -24,3 +25,8 @@ class TypZdarzeniaAdmin(admin.ModelAdmin):
     fields = ['nazwa']
 
 admin.site.register(TypZdarzenia,TypZdarzeniaAdmin)
+
+class ZdarzenieAdmin(admin.ModelAdmin):
+    fields = ['mecz','zawodnik','minuta','typ_zdarzenia']
+
+admin.site.register(Zdarzenie,ZdarzenieAdmin)

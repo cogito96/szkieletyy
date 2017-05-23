@@ -3,7 +3,14 @@
 {% block head %}teams{% endblock head %}
 
 {% block center_side %}
+<table align="center">
     {% for m in match %}
-        {{m.zespol_gospodarz}} {{m.bramki_gospodarz}}:{{m.bramki_gosc}} {{m.zespol_gosc}}</br>
+    <tr>
+        <td>{{m.zespol_gospodarz}}&nbsp;&nbsp;</td>
+        <td>{{m.bramki_gospodarz}}&nbsp;:&nbsp;{{m.bramki_gosc}}</td>
+        <td>&nbsp;&nbsp;{{m.zespol_gosc}}</td></br>
+    </tr>
     {% endfor %}
+</table>
+
 {%endblock center_side %}
